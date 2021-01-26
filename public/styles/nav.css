@@ -5,6 +5,7 @@ nav {
   padding: 1.5em;
   display: flex;
   justify-content: space-between;
+  width: 100%
 
 }
 
@@ -24,6 +25,6 @@ nav button {
 }
 
 nav i {
-  color: red;
+  color: #BB4430;
   width: 100%;
 }

@@ -1,0 +1,19 @@
+header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/foggy-birds.png');
+  background-color: #FFBF46;
+  color: #ffffff;
+}
+
+header h2 {
+  font-weight: 300;
+}
+
+.firstName {
+  font-weight: bold;
+}
