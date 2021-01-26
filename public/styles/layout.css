@@ -32,4 +32,5 @@ body {
    display:flex;
    width: 90%;
    align-self: center;
+   justify-content: center;
  }

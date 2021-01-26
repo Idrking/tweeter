@@ -1,0 +1,36 @@
+
+label {
+  width: 100%;
+  font-weight: 400;
+  margin: 0;
+}
+
+.new-tweet {
+  padding-top: 20px;
+  display: flex;
+}
+#tweet-text {
+  width: 100%;
+  background-color: transparent;
+  resize: none;
+  border: 0;
+  border-bottom: 3px solid 	#474747;
+}
+
+#tweet-text:focus {
+  outline: none;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  font: 1.2rem "Bungee", sans-serif;
+  padding-top: 5px;
+}
+
+form button {
+  color: #ffffff;
+  background-color: #4056A1;
+  border: 0;
+  padding: 5px 10px;
+}
