@@ -34,3 +34,7 @@ form button {
   border: 0;
   padding: 5px 10px;
 }
+
+.negative {
+  color: red;
+}
