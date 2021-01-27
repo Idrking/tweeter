@@ -6,18 +6,23 @@ $(document).ready(function() {
 
   //Helper functions for createTweetElement from /tweetAssembler.js  
   const createTweetElement = tweetData => {
-    const $tweet = $(`<article class="tweet"></article`);
+    const $tweet = $(`<article class="tweet"></article>`);
     $tweet.append(createHeader(tweetData)).append(createBody(tweetData)).append(createFooter(tweetData));
     return $tweet
   };
 
   const renderTweets = tweetsToRender => {
     const $tweetContainer = $('#tweet-feed');
-    for (let i = tweetsToRender.length - 1; i >= 0; i--) {
-      $tweetContainer.prepend(createTweetElement(tweetsToRender[i]));
+    for (let tweets of tweetsToRender) {
+      $tweetContainer.prepend(createTweetElement(tweets));
     }
   };
 
+  $('.new-tweet-form').on('submit', function(event) {
+    event.preventDefault();
+    $.post('/tweets', $(this).serialize());
+    $('#tweet-text').val('');
+  });
 
 
   const data = [
