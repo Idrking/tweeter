@@ -11,6 +11,7 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  // Renders all tweets with the newest tweets at the top using prepend.
   const renderTweets = tweetsToRender => {
     const $tweetContainer = $('#tweet-feed');
     for (let tweets of tweetsToRender) {
@@ -18,10 +19,12 @@ $(document).ready(function() {
     }
   };
 
-  // Loads all tweets in the 'database' if optional parameter is undefined or false, or just the most recent tweet is mostRecent is true;
-  const loadTweets = (mostRecent) => {
+  // Accepts an options object to control how many tweets it loads to the page.
+  // If options is omitted, or mostRecent is provided as false, loads all available tweets in the database
+  // If mostRecent is passed in as true, loads only the newest tweet
+  const loadTweets = (options) => {
     $.get({url: '/tweets/', success: (data) => {
-      renderTweets(mostRecent ? [data[data.length - 1]] : data);
+      renderTweets(options && options.mostRecent ? [data[data.length - 1]] : data);
     }});
   };
   loadTweets();
@@ -46,7 +49,7 @@ $(document).ready(function() {
         $('.counter').html(140);
         
         //Updates the tweet feed to show the new tweet
-        loadTweets(true);
+        loadTweets({mostRecent: true});
       });
     }
   });
