@@ -20,11 +20,15 @@ $(document).ready(function() {
 
   $('.new-tweet-form').on('submit', function(event) {
     event.preventDefault();
+    
+    // Removes an existing error messages so the user can notice if new errors appear
+    $('.error').slideUp(400, function() { this.remove()});
+    
     let tweet = $('#tweet-text').val();
     if (tweet === '' || tweet === null) {
-      alert('Cannot submit an empty tweet');
+      displayError('Cannot submit an empty tweet');
     } else if (tweet.length > 140) {
-      alert('Tweet is too long! Please limit to 140 characters');
+      displayError('Tweet is too long! Please limit to 140 characters');
     } else {
       $.post('/tweets/', $(this).serialize(), () => {
         //Resets the form to base state (counter at 140, and empty text area) upon successful submission
@@ -34,7 +38,6 @@ $(document).ready(function() {
         //Updates the tweet feed to show the new tweet
         loadTweets(true);
       });
-      
     }
   });
 
@@ -43,9 +46,6 @@ $(document).ready(function() {
     $.get({url: '/tweets/', success: (data) => {
       renderTweets(mostRecent ? [data[data.length - 1]] : data);
     }});
-
-
-
   };
   loadTweets();
 });

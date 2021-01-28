@@ -1,6 +1,5 @@
 const createHeader = (tweetData) => {
   const $header = $(`<header></header>`);
-  console.log($().text(tweetData.user.avatars));
   $header.append($(`<img src="${tweetData.user.avatars}" alt="profile-picture"><p>${tweetData.user.name}</p><h4>${tweetData.user.handle}</h4>`));
   return $header;
 };
