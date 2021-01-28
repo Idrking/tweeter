@@ -27,8 +27,8 @@ $(document).ready(function() {
       renderTweets(options && options.mostRecent ? [data[data.length - 1]] : data);
     }});
   };
-  loadTweets();
-
+  
+  // Handler for the new tweet submission form - uses AJAX call to update database and display the new tweet
   $('.new-tweet-form').on('submit', function(event) {
     event.preventDefault();
     
@@ -53,12 +53,9 @@ $(document).ready(function() {
       });
     }
   });
-
-  $('nav button').on('click', () => {
-    $('.new-tweet').slideToggle();
-    $('#tweet-text').focus();
-  });
-
+  
+  //On page load, loads all tweets;
+  loadTweets();
 });
 
 
