@@ -58,3 +58,13 @@ article.tweet:hover {
 article.tweet:hover .social-icons {
   visibility: visible;
 }
+
+@media only screen and (max-width: 450px) {
+  article.tweet header img {
+    height: 40px;
+  }
+
+  article.tweet header {
+    font-size: 1rem;
+  }
+}
