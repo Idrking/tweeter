@@ -2,13 +2,13 @@
   display: flex;
   background-color: #BB4430;
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   align-items: center;
   gap: 20px;
-  margin-top: 20px;
+  margin: 20px auto;
   padding: 10px 25px;
   border-radius: 20px;
   border: 5px solid white;
-  width: 60%;
+  width: 50%;
   justify-content: center;
 }

@@ -4,6 +4,6 @@ const displayError = (message) => {
     .append('<i class="fas fa-exclamation-triangle"></i>')
     .append(`<h3>${message}</h3>`);
   
-  $('.container').prepend($errorContainer);
+  $('.new-tweet').prepend($errorContainer);
   $('.error').hide().slideDown(400);
 }

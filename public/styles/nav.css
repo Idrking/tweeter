@@ -51,3 +51,33 @@ nav i {
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
+
+.scrollUp {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 10px;
+  background-color: #FFBF46;
+  border-radius: 100%;
+  border: none;
+  color: #ffffff;
+  font-size: 4rem;
+  padding: 45px;
+  width: 50px;
+  height: 50px;
+}
+
+.scrollUp:focus {
+  outline: none;
+}
+
+.scrollUp:hover {
+  background-color: #bc7b00;
+  cursor: pointer;
+}
+
+i:only-child {
+  position: relative;
+  right: 20px;
+  bottom: 35px;
+}
