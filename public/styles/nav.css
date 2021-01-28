@@ -26,7 +26,24 @@ nav button {
   padding-top: 25px;
 }
 
+nav button:hover {
+  cursor: pointer;
+}
+
+@keyframes nav-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
 nav i {
   color: #BB4430;
   width: 100%;
+  position: relative;
+  animation-name: nav-bounce;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
