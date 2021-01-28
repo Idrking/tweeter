@@ -4,7 +4,7 @@ $(document).ready(() => {
   $(window).scroll(() => {
     if ($(window).scrollTop() <= 200) {
       $newTweet.show();
-      $button.hide()
+      $button.hide();
     } else {
       $button.show();
       $newTweet.hide();
