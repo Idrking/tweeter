@@ -25,14 +25,23 @@ body {
 }
 
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
  .container {
    display:flex;
    flex-direction: column;
    width: 90%;
    align-items: center;
    margin-bottom: 20px;
+ }
+
+
+ @media only screen and (min-width: 1024px) {
+   body {
+     flex-direction: row;
+     align-items: flex-start;
+     gap: 10rem;
+   }
+
+   .container {
+     margin: 12rem 5rem auto auto;
+   }
  }
