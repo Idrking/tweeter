@@ -1,5 +1,5 @@
 const createHeader = (tweetData) => {
-  const $header = $(`<header></header>`)
+  const $header = $(`<header></header>`);
   $header.append($(`<img src="${tweetData.user.avatars}" alt="profile-picture"><p>${tweetData.user.name}</p><h4>${tweetData.user.handle}</h4>`));
   return $header;
 };
@@ -17,4 +17,4 @@ const createFooter = (tweetData) => {
   <i class="fas fa-heart"></i>
   </div>`));
   return $footer;
-}
+};

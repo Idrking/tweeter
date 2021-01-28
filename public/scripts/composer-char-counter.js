@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $('#tweet-text').on('input', function () {
+  $('#tweet-text').on('input', function() {
     const MAXTWEETLENGTH = 140;
     const counterNum = MAXTWEETLENGTH - $(this).val().length;
     const counter = $(this).siblings().children('output');
