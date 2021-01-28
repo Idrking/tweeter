@@ -30,6 +30,10 @@ nav button:hover {
   cursor: pointer;
 }
 
+nav button:focus {
+  outline: none;
+}
+
 @keyframes nav-bounce {
   0%, 100% {
     transform: translateY(0);

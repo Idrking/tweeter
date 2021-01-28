@@ -18,11 +18,21 @@ $(document).ready(function() {
     }
   };
 
+  // Loads all tweets in the 'database' if optional parameter is undefined or false, or just the most recent tweet is mostRecent is true;
+  const loadTweets = (mostRecent) => {
+    $.get({url: '/tweets/', success: (data) => {
+      renderTweets(mostRecent ? [data[data.length - 1]] : data);
+    }});
+  };
+  loadTweets();
+
   $('.new-tweet-form').on('submit', function(event) {
     event.preventDefault();
     
     // Removes an existing error messages so the user can notice if new errors appear
-    $('.error').slideUp(400, function() { this.remove()});
+    $('.error').slideUp(400, function() {
+      this.remove();
+    });
     
     let tweet = $('#tweet-text').val();
     if (tweet === '' || tweet === null) {
@@ -41,13 +51,11 @@ $(document).ready(function() {
     }
   });
 
-  // Loads all tweets in the 'database' if optional parameter is undefined or false, or just the most recent tweet is mostRecent is true;
-  const loadTweets = (mostRecent) => {
-    $.get({url: '/tweets/', success: (data) => {
-      renderTweets(mostRecent ? [data[data.length - 1]] : data);
-    }});
-  };
-  loadTweets();
+  $('nav button').on('click', () => {
+    $('.new-tweet').slideToggle();
+    $('#tweet-text').focus();
+  });
+
 });
 
 
