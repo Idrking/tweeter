@@ -1,11 +1,14 @@
 const createHeader = (tweetData) => {
   const $header = $(`<header></header>`);
+  console.log($().text(tweetData.user.avatars));
   $header.append($(`<img src="${tweetData.user.avatars}" alt="profile-picture"><p>${tweetData.user.name}</p><h4>${tweetData.user.handle}</h4>`));
   return $header;
 };
 
+// creates body with user generated tweet - uses .text to escape potential Cross Site Scripting
+// If site ever expands to allow user generated handles, name or other profile info, we'll need to escape those as well.
 const createBody = (tweetData) => {
-  return $(`<div>${tweetData.content.text}</div>`);
+  return $('<div></div>').text(tweetData.content.text);
 };
 
 
