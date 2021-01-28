@@ -41,6 +41,7 @@ article.tweet footer {
 }
 
 .social-icons {
+  visibility: hidden;
   color: #4056A1;
 }
 
@@ -52,4 +53,8 @@ article.tweet header~div {
 article.tweet:hover {
   box-shadow: 5px 5px #bec7e4;
   font-weight: 600;
+}
+
+article.tweet:hover .social-icons {
+  visibility: visible;
 }
