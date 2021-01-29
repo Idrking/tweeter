@@ -23,6 +23,11 @@ Features a responsive layout for desktop and mobile, and some basic page navigat
 
 ## Screenshots
 
+### Desktop View
 !["Desktop View"](https://github.com/Idrking/tweeter/blob/master/docs/DesktopView.png?raw=true)
+
+### Mobile View
 !["Mobile View"](https://github.com/Idrking/tweeter/blob/master/docs/MobileView.png?raw=true)
-!["Mobile View"](https://github.com/Idrking/tweeter/blob/master/docs/NavElements.png?raw=true)
+
+### Navigation Elements
+!["Navigation Elements"](https://github.com/Idrking/tweeter/blob/master/docs/NavElements.png?raw=true)
