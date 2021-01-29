@@ -20,3 +20,9 @@ Features a responsive layout for desktop and mobile, and some basic page navigat
 - md5
 
 * While not a strict dependency for the project to function, Sass Dart is required to pre-process the .scss stylesheets should you desire to make any changes.
+
+## Screenshots
+
+!["Desktop View"](https://github.com/Idrking/tweeter/blob/master/docs/DesktopView.png?raw=true)
+!["Mobile View"](https://github.com/Idrking/tweeter/blob/master/docs/MobileView.png?raw=true)
+!["Mobile View"](https://github.com/Idrking/tweeter/blob/master/docs/NavElements.png?raw=true)
