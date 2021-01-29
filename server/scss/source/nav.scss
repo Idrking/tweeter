@@ -1,3 +1,5 @@
+@import "globals";
+
 @keyframes nav-bounce {
   0%, 100% {
     transform: translateY(0);
@@ -6,6 +8,7 @@
     transform: translateY(10px);
   }
 }
+
 nav {
   height: 120px;
   background-color: transparent;
@@ -17,33 +20,38 @@ nav {
   width: 100%;
   position: fixed;
   top: 0px;
-}
-nav span {
-  font: 2.5rem "Bungee", sans-serif;
-}
-nav button {
-  background-color: transparent;
-  color: #ffffff;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: space-evenly;
-  border: 0;
-  padding-top: 25px;
-}
-nav button:hover {
-  cursor: pointer;
-}
-nav button:focus {
-  outline: none;
-}
-nav i {
-  color: #BB4430;
-  width: 100%;
-  position: relative;
-  animation-name: nav-bounce;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  
+  span {
+    font: 2.5rem 'Bungee', sans-serif;
+  }
+  
+  button {
+    background-color: transparent;
+    color: #ffffff;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 0;
+    padding-top: 25px;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  i {
+    color: #BB4430;
+    width: $fullContainer;
+    position: relative;
+    animation-name: nav-bounce;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
 }
 
 .scrollUp {
@@ -51,7 +59,7 @@ nav i {
   position: fixed;
   bottom: 25px;
   right: 10px;
-  background-color: #FFBF46;
+  background-color: $secondaryColor;
   border-radius: 100%;
   border: none;
   color: #ffffff;
@@ -59,11 +67,12 @@ nav i {
   padding: 45px;
   width: 50px;
   height: 50px;
-}
-.scrollUp i {
-  position: relative;
-  right: 20px;
-  bottom: 35px;
+  
+  i {
+    position: relative;
+    right: 20px;
+    bottom: 35px;
+  }
 }
 
 .scrollUp:focus {
@@ -75,11 +84,13 @@ nav i {
   cursor: pointer;
 }
 
+
 @media only screen and (max-width: 500px) {
+  
   nav {
     padding: 1rem;
   }
-
+  
   nav span {
     font-size: 1.5rem;
   }
@@ -88,6 +99,8 @@ nav i {
     font-size: 1.2rem;
   }
 }
+
+
 @media only screen and (min-width: 1024px) {
   nav {
     background-color: #4056A1;

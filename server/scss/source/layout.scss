@@ -1,0 +1,35 @@
+ @import "globals";
+
+ html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  @include centreVertical();
+  color: #545149;
+  background-color: $bodyColor;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+ .container {
+  @include centreVertical();
+   width: 90%;
+   margin-bottom: 20px;
+ }
+
+
+ @media only screen and (min-width: 1024px) {
+   body {
+     flex-direction: row;
+     align-items: flex-start;
+     gap: 10rem;
+   }
+
+   .container {
+     margin: 12rem 5rem auto auto;
+   }
+ }

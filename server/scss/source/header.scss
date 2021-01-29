@@ -1,0 +1,39 @@
+@import "globals";
+
+nav~header {
+  @include centreVertical();
+  padding-top: 3rem;
+  height: 400px;
+  width: $fullContainer;
+  background-image: url('../images/foggy-birds.png');
+  background-color: $secondaryColor;
+  color: #ffffff;
+  
+   h2 {
+    font-weight: 300;
+    margin: 0;
+  }
+  .firstName {
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  nav~header {
+    padding-top: 5rem;
+    img {
+       height: 200px;
+     }
+     h2 {
+       font-size: 2rem;
+     }
+  } 
+}
+
+
+@media only screen and (min-width: 1024px) {
+  nav~header {
+    width: 55%;
+    margin: 13rem auto auto 7rem;
+  }
+}

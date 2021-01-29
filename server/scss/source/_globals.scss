@@ -1,0 +1,11 @@
+$bodyColor: #f4f1ec;
+$secondaryColor: #FFBF46;
+$tertiaryColor: #4056A1;
+$borderColor: #474747;
+$fullContainer: 100%;
+
+@mixin centreVertical() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

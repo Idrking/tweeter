@@ -1,45 +1,36 @@
-nav~header {
-  padding-top: 3rem;
-  height: 400px;
-  width: 100%;
+nav ~ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('../images/foggy-birds.png');
+  padding-top: 3rem;
+  height: 400px;
+  width: 100%;
+  background-image: url("../images/foggy-birds.png");
   background-color: #FFBF46;
   color: #ffffff;
 }
-
-header h2 {
+nav ~ header h2 {
   font-weight: 300;
   margin: 0;
 }
-
-.firstName {
+nav ~ header .firstName {
   font-weight: bold;
 }
 
-
 @media only screen and (max-width: 500px) {
-  nav~header {
+  nav ~ header {
     padding-top: 5rem;
   }
-
-  header img {
+  nav ~ header img {
     height: 200px;
   }
-
-  header h2 {
+  nav ~ header h2 {
     font-size: 2rem;
   }
 }
-
-
 @media only screen and (min-width: 1024px) {
-  nav~header {
+  nav ~ header {
     width: 55%;
     margin: 13rem auto auto 7rem;
   }
-
-
 }
